@@ -101,7 +101,8 @@ const Home = ({
                     >
                         <Grid item xs={10} md={10}>
                             <Typography variant="h2" align="center" className={classes.married}>
-                                {"We're Getting Married!"}
+                                {/*  eslint-disable-next-line react/no-unescaped-entities */}
+                                We're Getting Married!
                             </Typography>
                         </Grid>
                     </Grid>

@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import {
     GoogleMap,
-    Marker,
-    MarkerWithLabel,
     withScriptjs,
     withGoogleMap,
 } from 'react-google-maps';
@@ -74,7 +72,7 @@ const styles = theme => ({
     },
 });
 
-const MyMapComponent = withScriptjs(withGoogleMap((props) => {
+const MyMapComponent = withScriptjs(withGoogleMap(() => {
     const [openMarker, setOpen] = useState(false);
     return (
         <GoogleMap
