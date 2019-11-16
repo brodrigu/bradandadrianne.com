@@ -56,6 +56,15 @@ const HomeHeader = ({ classes }) => (
                 >
                     Things To Do
                 </Button>
+                <Button
+                    color="primary"
+                    className={classes.menuButton}
+                    onClick={() => {
+                        window.location.href = 'https://www.zola.com/wedding/bradandadrianne/rsvp';
+                    }}
+                >
+                    RSVP
+                </Button>
             </Toolbar>
         </AppBar>
     </div>
