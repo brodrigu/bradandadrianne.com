@@ -52,9 +52,19 @@ const HomeHeader = ({ classes }) => (
                 </Button>
                 <Button
                     color="primary"
+                    className={classes.menuButton}
                     onClick={() => { window.location.href = '#/things-to-do'; }}
                 >
                     Things To Do
+                </Button>
+                <Button
+                    color="primary"
+                    className={classes.menuButton}
+                    onClick={() => {
+                        window.location.href = 'https://www.zola.com/registry/bradandadrianne';
+                    }}
+                >
+                    Registry
                 </Button>
                 <Button
                     color="primary"
