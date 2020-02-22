@@ -1,7 +1,7 @@
 {
     "palette": {
         "tonalOffset": 0.2,
-        "background": { "paper": "#fff", "default": "#fafafa" },
+        "background": { "paper": "#fbe8a738", "default": "#fafafa" },
         "contrastThreshold": 3,
         "grey": {
             "50": "#fafafa",

@@ -17,6 +17,8 @@ const styles = () => ({
     },
     menuButton: {
         marginRight: 20,
+        textTransform: 'uppercase',
+        color: 'black',
     },
     toolbar: {
         backgroundColor: 'white',

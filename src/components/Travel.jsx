@@ -77,12 +77,12 @@ const Home = ({
                         container
                         direction="row"
                         justify="center"
-                        alignItems="center"
+                        alignItems="left"
                         spacing={0}
                     >
                         <Grid item xs={12}>
                             <Typography variant="h3" align="center">
-                                Travel
+                                travel
                             </Typography>
                         </Grid>
                     </Grid>

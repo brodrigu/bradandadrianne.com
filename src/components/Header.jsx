@@ -10,13 +10,16 @@ const styles = () => ({
         flexGrow: 1,
     },
     logoButton: {
-        color: 'black',
         fontSize: ' 1.4rem',
         marginLeft: -12,
+        textTransform: 'uppercase',
+        color: '#7da0bc',
     },
     menuButton: {
         marginLeft: -12,
         marginRight: 20,
+        textTransform: 'uppercase',
+        color: '#000',
     },
     toolbar: {
         backgroundColor: 'white',
