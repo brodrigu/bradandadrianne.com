@@ -13,6 +13,9 @@ const styles = theme => ({
     and: {
         fontSize: '20px',
     },
+    bna: {
+        color: '#2a655f',
+    },
     card: {
         padding: theme.spacing(0, 4, 0),
     },
@@ -48,9 +51,9 @@ const styles = theme => ({
         height: '100px',
     },
     text: {
-        fontSize: '1rem',
-        fontWeight: 400,
-        lineHeight: 1.5,
+        // fontSize: '1rem',
+        // fontWeight: 400,
+        // lineHeight: 1.5,
         marginTop: '10px',
     },
     textBold: {
@@ -60,6 +63,11 @@ const styles = theme => ({
     },
     textBottom: {
         margin: theme.spacing(4),
+    },
+    title: {
+        color: '#2a655f',
+        fontWeight: 400,
+        textTransform: 'uppercase',
     },
 });
 
@@ -78,18 +86,13 @@ const Home = ({
                         alignItems="center"
                         spacing={0}
                     >
-                        <Grid item xs={5} align="center">
-                            <Typography variant="h4" align="right">
-                                Brad Rodriguez
+                        <Grid item xs={12} align="center">
+                            <Typography variant="h4" align="center" className={classes.bna}>
+                                BRAD RODRIGUEZ & ADRIANNE LEE
                             </Typography>
                         </Grid>
-                        <Grid item xs={2} align="center">
-                            <img alt="flowers" src="https://d2gt2lt628wbyx.cloudfront.net/assets/union-navy/story_1_color_3.png" width="50%" />
-                        </Grid>
-                        <Grid item xs={5} align="center">
-                            <Typography variant="h4" align="left">
-                                Adrianne Lee
-                            </Typography>
+                        <Grid item xs={10} md={7} align="center">
+                            <img className={classes.image} alt="flower" src="https://d2gt2lt628wbyx.cloudfront.net/assets/union-navy/union_color3.png" width="80%" />
                         </Grid>
                     </Grid>
                     <Grid
@@ -120,11 +123,8 @@ const Home = ({
                         </Grid>
                         <Grid item sm={12}>
                             <Typography variant="h4" align="center">
-                                Sitges, Spain
+                                Sitges, Barcelona, Spain
                             </Typography>
-                        </Grid>
-                        <Grid item xs={10} md={6} align="center">
-                            <img className={classes.image} alt="flowers" src="https://d2gt2lt628wbyx.cloudfront.net/assets/union-navy/union_color3.png" width="70%" />
                         </Grid>
                     </Grid>
                     <div className={classes.spacer} />
@@ -136,12 +136,12 @@ const Home = ({
                         spacing={2}
                     >
                         <Grid item sm={10}>
-                            <Typography variant="h5" align="center">
-                                Hello Family & Friends!
+                            <Typography variant="h5" align="center" className={classes.title}>
+                                Hello Family & Friends
                             </Typography>
                         </Grid>
                         <Grid item sm={10} align="center">
-                            <Typography variant="p" align="center" className={classes.text}>
+                            <Typography variant="h5" align="center" className={classes.text}>
                                 We are so excited to have our wedding near the Mediterranean
                                 coast in Spain. The wedding will be a semi-formal, intimate
                                 and relaxing getaway near the beach town of Sitges. Following

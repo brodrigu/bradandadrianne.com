@@ -6,6 +6,9 @@ import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = () => ({
+    button: {
+        marginTop: '20px',
+    },
     text: {
         fontSize: '1.2rem',
         fontWeight: 400,
@@ -41,7 +44,7 @@ const ThingToDo = ({
                 {description}
             </Typography>
         </Grid>
-        <Grid item xs={12} align="center">
+        <Grid item xs={12} align="center" className={classes.button}>
             <Button
                 variant="contained"
                 color="primary"
