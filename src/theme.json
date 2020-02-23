@@ -1,7 +1,7 @@
 {
     "palette": {
         "tonalOffset": 0.2,
-        "background": { "paper": "#fbe8a738", "default": "#fafafa" },
+        "background": { "paper": "#7da0bc78", "default": "#fff" },
         "contrastThreshold": 3,
         "grey": {
             "50": "#fafafa",
@@ -49,7 +49,7 @@
             "active": "rgba(0, 0, 0, 0.54)"
         },
         "primary": {
-            "main": "#4c578e",
+            "main": "#2a655f",
             "light": "rgb(111, 120, 164)",
             "dark": "rgb(53, 60, 99)",
             "contrastText": "#fff"

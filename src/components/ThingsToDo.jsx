@@ -58,7 +58,7 @@ const styles = theme => ({
         height: '40px',
     },
     text: {
-        fontSize: '1.2rem',
+        fontSize: '1.1rem',
         fontWeight: 400,
         lineHeight: 1.5,
     },
@@ -101,7 +101,7 @@ const ThingsToDo = ({
     classes,
 }) => (
     <React.Fragment>
-        <Header />
+        <Header active="things to do" />
         <main className={classes.layout}>
             <div className={classes.content}>
                 <div className={classes.card}>
@@ -113,9 +113,13 @@ const ThingsToDo = ({
                         spacing={0}
                     >
                         <Grid item xs={12} align="center">
-                            <Typography variant="h3" align="center">
-                                Things to do
-                            </Typography>
+                            <MyMapComponent
+                                isMarkerShown
+                                googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDYFzSA8WB93e9ejk3b5dThUpHHKrpNoyk&libraries=geometry,drawing,places"
+                                loadingElement={<div style={{ height: '100%' }} />}
+                                containerElement={<div style={{ height: '400px' }} />}
+                                mapElement={<div style={{ height: '100%' }} />}
+                            />
                             <div className={classes.spacer} />
                             <Typography variant="p" align="center" className={classes.text}>
                                 We hope you are able to enjoy a fun-filled weekend with us
@@ -135,24 +139,6 @@ const ThingsToDo = ({
                         </Grid>
                         <Grid item xs={10} md={6}>
                             <img className={classes.image} alt="instagram influencer" src="https://d2gt2lt628wbyx.cloudfront.net/assets/union-navy/union_color3.png" width="100%" />
-                        </Grid>
-                    </Grid>
-                    <div className={classes.spacer} />
-                    <Grid
-                        container
-                        direction="row"
-                        justify="center"
-                        alignItems="center"
-                        spacing={2}
-                    >
-                        <Grid item xs={10} md={12}>
-                            <MyMapComponent
-                                isMarkerShown
-                                googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDYFzSA8WB93e9ejk3b5dThUpHHKrpNoyk&libraries=geometry,drawing,places"
-                                loadingElement={<div style={{ height: '100%' }} />}
-                                containerElement={<div style={{ height: '400px' }} />}
-                                mapElement={<div style={{ height: '100%' }} />}
-                            />
                         </Grid>
                     </Grid>
                     <div className={classes.spacer} />

@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import Gallery from 'react-photo-gallery';
 
@@ -60,35 +59,10 @@ const Photos = ({
     classes,
 }) => (
     <React.Fragment>
-        <Header />
+        <Header active="photos" />
         <main className={classes.layout}>
             <div className={classes.content}>
                 <div className={classes.card}>
-                    <Grid
-                        container
-                        direction="row"
-                        justify="center"
-                        alignItems="center"
-                        spacing={0}
-                    >
-                        <Grid item xs={12}>
-                            <Typography variant="h3" align="center">
-                                Photos
-                            </Typography>
-                        </Grid>
-                    </Grid>
-                    <Grid
-                        container
-                        direction="row"
-                        justify="center"
-                        alignItems="center"
-                        spacing={2}
-                    >
-                        <Grid item xs={8} md={6} align="center">
-                            <img className={classes.image} alt="flowers" src="https://d2gt2lt628wbyx.cloudfront.net/assets/union-navy/union_color3.png" width="80%" />
-                        </Grid>
-                    </Grid>
-                    <div className={classes.spacer} />
                     <Grid
                         container
                         direction="row"

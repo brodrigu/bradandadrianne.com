@@ -14,7 +14,7 @@ const styles = theme => ({
         fontSize: '20px',
     },
     bna: {
-        color: '#7da0bc',
+        color: '#2a655f',
     },
     card: {
         padding: theme.spacing(0, 4, 0),
@@ -65,9 +65,9 @@ const styles = theme => ({
         margin: theme.spacing(4),
     },
     title: {
-        textTransform: 'uppercase',
+        color: '#2a655f',
         fontWeight: 400,
-        color: '#7da0bc',
+        textTransform: 'uppercase',
     },
 });
 

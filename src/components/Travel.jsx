@@ -8,6 +8,8 @@ import { withStyles } from '@material-ui/core/styles';
 import Header from '~components/Header';
 import TravelCard from '~components/TravelCard';
 
+import Hero from './Hero';
+
 
 import travels from '../travels.json';
 
@@ -51,9 +53,9 @@ const styles = theme => ({
         height: '40px',
     },
     text: {
-        fontSize: '1.2rem',
-        fontWeight: 400,
-        lineHeight: 1.5,
+        fontSize: '1.0rem',
+        // fontWeight: 400,
+        // lineHeight: 1.5,
     },
     textBold: {
         fontWeight: 700,
@@ -69,7 +71,7 @@ const Home = ({
     classes,
 }) => (
     <React.Fragment>
-        <Header />
+        <Header active="travel" />
         <main className={classes.layout}>
             <div className={classes.content}>
                 <div className={classes.card}>
@@ -77,35 +79,38 @@ const Home = ({
                         container
                         direction="row"
                         justify="center"
-                        alignItems="left"
-                        spacing={0}
-                    >
-                        <Grid item xs={12}>
-                            <Typography variant="h3" align="center">
-                                travel
-                            </Typography>
-                        </Grid>
-                    </Grid>
-                    <Grid
-                        container
-                        direction="row"
-                        justify="center"
                         alignItems="center"
                         spacing={2}
                     >
-                        <Grid item xs={10} md={7} align="center">
-                            <img className={classes.image} alt="Villa Catalina" src="https://images.zola.com/90f1f319-6825-43d0-bdf9-427f03210fab?h=400" width="80%" />
-                        </Grid>
-                        <Grid item xs={10} md={7} align="center">
-                            <Typography variant="p" align="center" className={classes.text}>
-                                Sitges is a popular beach town about a 25-30 minute drive from the
-                                Barcelona El-Prat Airport.
-                                On this page, please find information about transportation and
-                                accommodation in and around Sitges.
-                            </Typography>
+                        <Grid item xs={12} md={12} align="center">
+                            <Hero
+                                image="https://cdn.getyourguide.com/img/tour_img-454880-148.jpg"
+                                details={(
+                                    <React.Fragment>
+                                        <Typography variant="h4" align="center">
+                                            Sitges, Spain
+                                        </Typography>
+                                        <Typography
+                                            variant="p"
+                                            align="center"
+                                            className={classes.text}
+                                        >
+                                            Sitges is a popular beach town about a 25-30
+                                            minute drive from the Barcelona El-Prat Airport.
+                                            On this page, please find information about
+                                            transportation and accommodation in and around Sitges.
+                                        </Typography>
+                                    </React.Fragment>
+                                )}
+                            />
                         </Grid>
                         <Grid item xs={9} md={6} align="center">
-                            <img className={classes.image} alt="flowers" src="https://d2gt2lt628wbyx.cloudfront.net/assets/union-navy/union_color3.png" width="80%" />
+                            <img
+                                className={classes.image}
+                                alt="flowers"
+                                src="https://d2gt2lt628wbyx.cloudfront.net/assets/union-navy/union_color3.png"
+                                width="80%"
+                            />
                         </Grid>
                     </Grid>
                     <div className={classes.spacer} />

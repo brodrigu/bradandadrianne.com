@@ -2,11 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import Hidden from '@material-ui/core/Hidden';
 import Link from '@material-ui/core/Link';
 import { withStyles } from '@material-ui/core/styles';
 import ScheduleItem from './ScheduleItem';
-
+import Hero from './Hero';
 import Header from '~components/Header';
 
 const styles = theme => ({
@@ -63,7 +62,7 @@ const Schedule = ({
     classes,
 }) => (
     <React.Fragment>
-        <Header />
+        <Header active="schedule" />
         <main className={classes.layout}>
             <div className={classes.content}>
                 <div className={classes.card}>
@@ -72,63 +71,39 @@ const Schedule = ({
                         direction="row"
                         justify="center"
                         alignItems="center"
-                        spacing={0}
-                    >
-                        <Grid item xs={12}>
-                            <Typography variant="h3" align="center" className={classes.title}>
-                                SCHEDULE
-                            </Typography>
-                        </Grid>
-                    </Grid>
-                    <Grid
-                        container
-                        direction="row"
-                        justify="center"
-                        alignItems="center"
                         spacing={2}
                     >
                         <Grid item xs={12} md={12} align="center">
-                            <img className={classes.image} alt="Villa Catalina" src="https://66.media.tumblr.com/e03f2692f00927aacb9af49ce8d2f0fe/tumblr_nfdxh43WOn1r2doe0o2_1280.jpg" width="100%" />
-
-                        </Grid>
-                        <Grid
-                            container
-                            direction="row"
-                            justify="center"
-                            alignItems="flex-start"
-                        >
-                            <Grid item xs={12}>
-                                <Typography variant="h4" align="center">
-                                    Villa Catalina
-                                </Typography>
-                            </Grid>
-                            <Grid item xs={12} align="center">
-                                <Typography variant="p" align="center">
-                                    <Link
-                                        href="https://maps.google.com/?cid=10672543124784078"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        Carretera de Vilafranca km 4,6
-                                        <br />
-                                        Sant Pere de Ribes, 08810
-                                        <br />
-                                        Spain
-                                    </Link>
-                                </Typography>
-                            </Grid>
-                            <Grid item xs={12} align="center">
-                                <Typography variant="h5" align="center">
-                                    Sunday, May 24, 2020
-                                </Typography>
-                            </Grid>
-                            <div className={classes.spacer} />
-                            <Grid item xs={4} align="center">
-                                <Typography variant="p" align="center" className={classes.text}>
-                                    Garden Attire: Wear sundresses, floral prints,
-                                    suits in lighter hues, and fun hats and fascinators.
-                                </Typography>
-                            </Grid>
+                            <Hero
+                                image="https://66.media.tumblr.com/e03f2692f00927aacb9af49ce8d2f0fe/tumblr_nfdxh43WOn1r2doe0o2_1280.jpg"
+                                details={(
+                                    <React.Fragment>
+                                        <Typography variant="h4" align="center">
+                                            Villa Catalina
+                                        </Typography>
+                                        <Typography variant="p" align="center">
+                                            <Link
+                                                href="https://maps.google.com/?cid=10672543124784078"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                Carretera de Vilafranca km 4,6
+                                                <br />
+                                                Sant Pere de Ribes, 08810
+                                                <br />
+                                                Spain
+                                            </Link>
+                                        </Typography>
+                                        <Typography variant="h5" align="center">
+                                            Sunday, May 24, 2020
+                                        </Typography>
+                                        <Typography variant="p" align="center" className={classes.text}>
+                                            Garden Attire: Wear sundresses, floral prints,
+                                            suits in lighter hues, and fun hats and fascinators.
+                                        </Typography>
+                                    </React.Fragment>
+                                )}
+                            />
                         </Grid>
                         <Grid item xs={10} md={7} align="center">
                             <img className={classes.image} alt="instagram influencer" src="https://d2gt2lt628wbyx.cloudfront.net/assets/union-navy/union_color3.png" width="80%" />
@@ -175,7 +150,6 @@ const Schedule = ({
                             details=""
                         />
                     </Grid>
-                    <div className={classes.spacer} />
                     <div className={classes.spacer} />
                     <Grid
                         container

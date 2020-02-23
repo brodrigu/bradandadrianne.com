@@ -10,6 +10,9 @@ import HotelIcon from '@material-ui/icons/HotelOutlined';
 import NoteIcon from '@material-ui/icons/CommuteOutlined';
 
 const styles = () => ({
+    button: {
+        marginTop: '10px',
+    },
     text: {
         fontSize: '1rem',
         fontWeight: 400,
@@ -53,7 +56,7 @@ const ThingToDo = ({
                 {description}
             </Typography>
         </Grid>
-        <Grid item xs={12} align="center">
+        <Grid item xs={12} align="center" className={classes.button}>
             <Button
                 variant="contained"
                 color="primary"
